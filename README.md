@@ -9,7 +9,7 @@ Join the discord server linked above to get support, see upcoming features, or t
 ## Can I just add Momo to my server?
 Soon
 ### Web dashboard
-Introduced in update 1.2, Momo features a [web dashboard](https://momobot.io/dash) to configure various aspects of the bot, such as welcome prefix, enabled commands, and Twitter/Reddit feeds. You don't have to be the server owner, either - configuration starts from moderators with the `kick` permission. Everything that can be done through the dashboard can also be done through commands. This is available to download to host yourself
+Soon
 ### Features? Gimme some info!
 * Reddit, Twitter, & Twitch.tv feeds - Get updates directly to your channel of choice with image/preview configuration
 * Play music in a music channel. Can play off direct Youtube searches, too!
