@@ -1,5 +1,5 @@
 # Momo, an open source easy-to-host Discord Bot
-[![license](https://img.shields.io/github/license/paul-io/momo-2.svg)](https://github.com/paul-io/momo-2/blob/master/LICENSE) [![Dependencies](https://app.updateimpact.com/badge/809606116261629952/Momo%20Discord%20Bot.svg?config=test)](https://app.updateimpact.com/latest/809606116261629952/Momo%20Discord%20Bot) [![Dependency Status](https://www.versioneye.com/user/projects/58677499e78d7d00471b7787/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58677499e78d7d00471b7787) [![GitHub release](https://img.shields.io/github/release/paul-io/momo-2.svg)](https://github.com/paul-io/momo-2/releases) [![join the Momo discord server](https://discordapp.com/api/guilds/259125580744753153/embed.png)](https://discord.gg/uM3pyW8) 
+[![license](https://img.shields.io/github/license/paul-io/momo-2.svg)](https://github.com/paul-io/momo-2/blob/master/LICENSE) [![Dependencies](https://app.updateimpact.com/badge/809606116261629952/Momo%20Discord%20Bot.svg?config=test)](https://app.updateimpact.com/latest/809606116261629952/Momo%20Discord%20Bot) [![Dependency Status](https://www.versioneye.com/user/projects/58677499e78d7d00471b7787/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58677499e78d7d00471b7787) [![GitHub release](https://img.shields.io/github/release/paul-io/momo-2.svg)](https://github.com/xPlodeBoi/Momo) [![join the Momo discord server](https://discordapp.com/api/guilds/259125580744753153/embed.png)](https://discord.gg/f9uBU7y) 
 
 Join the discord server linked above to get support, see upcoming features, or to test the bot!
 
@@ -7,7 +7,7 @@ Join the discord server linked above to get support, see upcoming features, or t
 
 
 ## Can I just add Momo to my server?
-After July 15, 2017, you cannot. Server costs were unmanageable (lots of bandwidth and processing power needed for music to 100+ servers at a time), so I made the difficult decision to shut it down. Check the wiki for setup instructions to host it yourself!
+Soon
 ### Web dashboard
 Introduced in update 1.2, Momo features a [web dashboard](https://momobot.io/dash) to configure various aspects of the bot, such as welcome prefix, enabled commands, and Twitter/Reddit feeds. You don't have to be the server owner, either - configuration starts from moderators with the `kick` permission. Everything that can be done through the dashboard can also be done through commands. This is available to download to host yourself
 ### Features? Gimme some info!
@@ -20,16 +20,6 @@ Introduced in update 1.2, Momo features a [web dashboard](https://momobot.io/das
 * Create a strawpoll from discord & directly link it to your users
 * Log channel for user join/leaves, bans, kicks, and nickname changes
 * And more!
-
----
-
-## Hosting Momo for yourself
-More descriptive details are at the [repository wiki](https://github.com/paul-io/momo-2/wiki)
-`you need java 8 to run this bot`
-
-* If you want to host your own instance of the bot, feel free to take a look at the Releases tab and download the package. Fill out the configuration in the `resources/Bot.properties` file, then run `java -jar momo-x.x.x.jar` where `x.x.x` is the current version. 
-* To obtain a bot token from Discord, head on over to the [Discord Developers](https://discordapp.com/developers/applications/me) page. From there, you can create an Application, then convert it to a Bot account. Then, click to show the bot token, which you can copy and paste into `Bot.properties`
-* Hosting Momo for yourself nets you some benefits. Music functionality, though dependent on your internet speeds, will be better for single servers than a larger cluster. You can also change its username, avatar, and game status to whatever you see fit!
 
 ---
 
