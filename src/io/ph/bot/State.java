@@ -10,7 +10,7 @@ import net.dv8tion.jda.core.entities.Icon;
 
 /**
  * Various helper methods to change the state of the bot
- * @author Paul
+ * @author xPlodeBoi
  *
  */
 public class State {
