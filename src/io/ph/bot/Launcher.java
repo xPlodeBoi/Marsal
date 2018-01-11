@@ -9,7 +9,7 @@ import net.dv8tion.jda.core.exceptions.RateLimitedException;
 
 /**
  * Main entry point
- * @author Paul
+ * @author xPlodeBoi
  *
  */
 public class Launcher {
