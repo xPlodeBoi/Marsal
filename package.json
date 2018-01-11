@@ -2,7 +2,7 @@
   "name": "Marsal",
   "description": "A Discord bot.",
   "version": "1.0",
-  "main": "bot.js",
+  "main": "bot.java",
   "scripts": {
     "start": "node bot.java"
   },
