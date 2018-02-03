@@ -28,3 +28,6 @@ dependency-reduced-pom.xml
 /target/*
 # temporary #
 keystore.jks
+\.idea/libraries/
+
+\.idea/
