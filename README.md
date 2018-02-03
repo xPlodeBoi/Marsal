@@ -3,7 +3,7 @@
 
 Join the discord server linked above to get support, see upcoming features, or to test the bot!
 
-**Marsal** is a simple-to-use Discord bot based off of [JDA](https://github.com/DV8FromTheWorld/JDA).  From sending Twitch.tv notifications to playing music, and from pulling anime theme songs off of [Themes.moe](https://themes.moe) to temporarily muting troublemakers, Marsal can do a lot for your server.
+**Marsal** is a simple-to-use Discord bot based off of [JDA](https://github.com/DV8FromTheWorld/JDA).  From sending Twitch.tv notifications to playing music.
 
 
 ## Can I just add Marsal to my server?
