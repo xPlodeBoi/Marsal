@@ -536,26 +536,12 @@ public class GuildObject {
 	public class HistoricalSearches {
 		// This is used to play Themes.moe or Youtube results directly with $music
 		private Map<Integer, String[]> historicalMusic;
-		// This is used to do $theme #
-		private Map<Integer, ArrayList<Theme>> historicalThemeSearchResults;
 
 		HistoricalSearches() {
 			this.historicalMusic = ExpiringMap.builder()
 					.expiration(10, TimeUnit.MINUTES)
 					.expirationPolicy(ExpirationPolicy.CREATED)
 					.build();
-			historicalThemeSearchResults = ExpiringMap.builder()
-					.expiration(10, TimeUnit.MINUTES)
-					.expirationPolicy(ExpirationPolicy.CREATED)
-					.build();
-		}
-
-		public Map<Integer, ArrayList<Theme>> getHistoricalThemeSearchResults() {
-			return historicalThemeSearchResults;
-		}
-
-		public void addHistoricalThemeSearchResult(int i, ArrayList<Theme> a) {
-			this.historicalThemeSearchResults.put(i, a);
 		}
 
 		public Map<Integer, String[]> getHistoricalMusic() {

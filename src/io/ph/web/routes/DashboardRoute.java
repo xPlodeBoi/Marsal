@@ -20,8 +20,6 @@ import io.ph.bot.model.GuildObject.SpecialChannels;
 import io.ph.bot.model.Permission;
 import io.ph.util.Util;
 import io.ph.web.WebServer;
-import io.ph.web.beans.SparkRedditBean;
-import io.ph.web.beans.SparkTwitterBean;
 import net.dv8tion.jda.core.entities.Role;
 import net.dv8tion.jda.core.entities.TextChannel;
 import net.dv8tion.jda.core.entities.VoiceChannel;
@@ -119,10 +117,6 @@ public class DashboardRoute {
 			
 			// All roles
 			attributes.put("roles", roleList);
-
-			// Feed attributes
-			attributes.put("redditFeed", SparkRedditBean.getSubredditsForGuildId(id));
-			attributes.put("twitterFeed", SparkTwitterBean.getTwitterForGuild(id));
 
 			//Server configuration attributes
 			attributes.put("joinableRoleLimitation", g.getConfig().isLimitToOneRole());

@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.lang.management.ManagementFactory;
 import java.text.NumberFormat;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
@@ -18,12 +17,6 @@ import io.ph.bot.Bot;
 import io.ph.bot.commands.Command;
 import io.ph.bot.commands.CommandCategory;
 import io.ph.bot.commands.CommandData;
-import io.ph.bot.feed.RedditEventListener;
-import io.ph.bot.feed.RedditFeedObserver;
-import io.ph.bot.feed.TwitchEventListener;
-import io.ph.bot.feed.TwitchFeedObserver;
-import io.ph.bot.feed.TwitterEventListener;
-import io.ph.bot.feed.TwitterFeedObserver;
 import io.ph.bot.model.Permission;
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.entities.Message;
@@ -78,9 +71,6 @@ public class Diagnostics extends Command {
 		em.addField("Memory usage", format.format(r.totalMemory() / (1024 * 1024)) + "MB", true);
 		em.addField("CPU usage", getCpuLoad() + "%", true);
 		em.addField("Threads", Thread.activeCount() + "", true);
-		em.addField("Subreddit Feed Count", getSubredditFeedCount() + "", true);
-		em.addField("Twitter Feed Count", getTwitterFeedCount() + "", true);
-		em.addField("Twitch Feed Count", getTwitchFeedCount() + "", true);
 		em.addField("Playing music", String.format("%d/%d",
 				playingMusic(), guildCounter.intValue()), true);
 		AtomicLong responses = new AtomicLong();
@@ -92,28 +82,7 @@ public class Diagnostics extends Command {
 		em.setFooter("Bot version: " + Bot.BOT_VERSION, null);
 		msg.getChannel().sendMessage(em.build()).queue();
 	}
-	
-	private static int getSubredditFeedCount() {
-		int counter = 0;
-		for(List<RedditFeedObserver> list : RedditEventListener.getFeed().values()) {
-			counter += list.size();
-		}
-		return counter;
-	}
-	private static int getTwitterFeedCount() {
-		int counter = 0;
-		for(List<TwitterFeedObserver> list : TwitterEventListener.getFeed().values()) {
-			counter += list.size();
-		}
-		return counter;
-	}
-	private static int getTwitchFeedCount() {
-		int counter = 0;
-		for(List<TwitchFeedObserver> list : TwitchEventListener.getFeed().values()) {
-			counter += list.size();
-		}
-		return counter;
-	}
+
 	private static int playingMusic() {
 		return currentMusic.values().stream()
 				.mapToInt(Integer::intValue).sum();

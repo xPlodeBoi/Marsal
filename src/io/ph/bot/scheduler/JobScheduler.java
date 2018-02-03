@@ -8,12 +8,7 @@ import org.quartz.SimpleScheduleBuilder;
 import org.quartz.Trigger;
 import org.quartz.TriggerBuilder;
 import org.quartz.impl.StdSchedulerFactory;
-import org.slf4j.LoggerFactory;
 
-import io.ph.bot.Bot;
-import io.ph.bot.exception.NoAPIKeyException;
-import io.ph.bot.feed.RedditEventListener;
-import io.ph.bot.feed.TwitchEventListener;
 import io.ph.bot.jobs.ReminderJob;
 import io.ph.bot.jobs.StatusChangeJob;
 import io.ph.bot.jobs.TimedPunishJob;
@@ -30,42 +25,11 @@ public class JobScheduler {
 		try {
 			scheduler = new StdSchedulerFactory("resources/config/quartz.properties").getScheduler();
 			scheduler.start();
-			startJobs();
 		} catch (SchedulerException e) {
 			e.printStackTrace();
 		}
 	}
 
-	/**
-	 * Periodically check the Twitch.tv API for stream status changes
-	 */
-	private static void twitchStreamCheck() {
-		JobDetail job = JobBuilder.newJob(TwitchEventListener.class)
-				.withIdentity("twitchJob", "group1").build();
-		Trigger trigger = TriggerBuilder.newTrigger().withIdentity("twitchJob", "group1")
-				.withSchedule(SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(180).repeatForever()).build();
-		try {
-			scheduler.scheduleJob(job, trigger);
-		} catch (SchedulerException e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Periodically check /r/all for updates
-	 */
-	private static void redditFeed() {
-		JobDetail job = JobBuilder.newJob(RedditEventListener.class)
-				.withIdentity("redditFeedJob", "group1").build();
-		Trigger trigger = TriggerBuilder.newTrigger().withIdentity("redditFeedJob", "group1")
-				.withSchedule(SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(8).repeatForever()).build();
-		try {
-			scheduler.scheduleJob(job, trigger);
-		} catch (SchedulerException e) {
-			e.printStackTrace();
-		}
-	}
-	
 	/**
 	 * Periodically check for reminders
 	 */
@@ -119,9 +83,12 @@ public class JobScheduler {
 			e.printStackTrace();
 		}
 	}
-	/**
+
+
+	/*
+	/ **
 	 * Register scheduler
-	 */
+	 * /
 	private static void startJobs() {
 		try {
 			Bot.getInstance().getApiKeys().get("twitch");
@@ -152,4 +119,5 @@ public class JobScheduler {
 		remindCheck();
 		punishCheck();
 	}
+	*/
 }

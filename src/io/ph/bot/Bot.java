@@ -16,7 +16,6 @@ import org.slf4j.LoggerFactory;
 
 import io.ph.bot.events.CustomEventDispatcher;
 import io.ph.bot.exception.NoAPIKeyException;
-import io.ph.bot.feed.TwitterEventListener;
 import io.ph.bot.jobs.StatusChangeJob;
 import io.ph.bot.listeners.Listeners;
 import io.ph.bot.listeners.ModerationListeners;
@@ -99,7 +98,6 @@ public class Bot {
 	 */
 	private static void initialize() {
 		JobScheduler.initializeScheduler();
-		TwitterEventListener.initTwitter();
 		WebsocketServer.getInstance().start();
 		WebServer.launchServer();
 		// ListenMoeSocket.getInstance().connect();
