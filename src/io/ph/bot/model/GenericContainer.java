@@ -1,6 +1,10 @@
 package io.ph.bot.model;
 
-public class GenericContainer<T> {
+import java.util.function.Consumer;
+import java.util.function.Supplier;
+
+public class GenericContainer<T>
+implements Consumer<T>, Supplier<T> {
 
     private T t;
 
@@ -16,5 +20,15 @@ public class GenericContainer<T> {
 
     public void setVal(T t) {
         this.t = t;
+    }
+
+    @Override
+    public void accept(T t) {
+        this.t = t;
+    }
+
+    @Override
+    public T get() {
+        return t;
     }
 }
