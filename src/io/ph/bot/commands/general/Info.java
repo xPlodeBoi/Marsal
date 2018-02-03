@@ -38,9 +38,9 @@ public class Info extends Command {
 		.setDescription("I can do a lot of things! Too many to list here, though. Feel free to take a look "
 				+ "through the links below, though, to get a quick rundown of my features")
 		.setThumbnail(msg.getJDA().getSelfUser().getAvatarUrl())
-		.setFooter(String.format("Version %s | Made with <3 by xPlodeBoi#4644",
+		.setFooter(String.format("Version %s | Made with <3 by %s", 
 				Bot.BOT_VERSION,
-				"Marsal"), null);
+				"Kagumi"), null);
 		msg.getChannel().sendMessage(em.build()).queue();
 	}
 

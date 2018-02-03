@@ -21,7 +21,7 @@ import net.dv8tion.jda.core.exceptions.RateLimitedException;
 /**
  * Ban a user
  * Can ban for a temporary amount of time
- * @author Paul
+ * @author xPlodeBoi
  *
  */
 @CommandData (

@@ -35,6 +35,11 @@ import net.dv8tion.jda.core.entities.User;
 import net.dv8tion.jda.core.entities.VoiceChannel;
 import net.dv8tion.jda.core.exceptions.RateLimitedException;
 
+/**
+ * Singleton instance of the entire bot. Includes configuration and the main JDA singleton
+ * @author Paul
+ *
+ */
 public class Bot {
 	private static final Bot instance;
 	public Shards shards;
@@ -49,7 +54,7 @@ public class Bot {
 
 	// Set to true if you want various debug statements
 	public static final boolean DEBUG = false;
-	public static final String BOT_VERSION = "v1.1 beta";
+	public static final String BOT_VERSION = "v1.0";
 	public static boolean isReady = false;
 
 	private APIKeys apiKeys = new APIKeys();
@@ -77,14 +82,14 @@ public class Bot {
 			jdaClients.add(new JDABuilder(AccountType.BOT)
 					.setToken(botConfig.getToken())
 					.setStatus(OnlineStatus.DO_NOT_DISTURB)
-					.setGame(Game.of("launching..."))
+					.setGame(Game.of("loading..."))
 					.addEventListener(new Listeners(), new ModerationListeners(), new VoiceChannelListeners())
 					.buildBlocking());
 		}
 		shards = new Shards();
 		State.changeBotAvatar(new File("resources/avatar/" + Bot.getInstance().getConfig().getAvatar()));
 		State.changeBotPresence(OnlineStatus.ONLINE);
-		State.changeBotStatus("-help | v.1.0");
+		State.changeBotStatus("$help | v1.0");
 		initialize();
 		isReady = true;
 	}
@@ -107,7 +112,6 @@ public class Bot {
 			config.load(finput, "UTF-8");
 			config.setEncoding("UTF-8");
 			botConfig.setToken(config.getString("BotToken"));
-			botConfig.api(config.getString("api.youtube"));
 			botConfig.setAvatar(config.getString("Avatar"));
 			botConfig.setBotOwnerId(config.getLong("BotOwnerId", 0));
 			botConfig.setBotInviteLink(config.getString("InviteLink"));
@@ -247,9 +251,6 @@ public class Bot {
 
 		public void setBotInviteLink(String botInviteLink) {
 			this.botInviteLink = botInviteLink;
-		}
-
-		public void api(String api){
 		}
 	}
 

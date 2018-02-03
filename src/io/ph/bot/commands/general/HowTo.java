@@ -165,7 +165,7 @@ public class HowTo extends Command {
 		.setColor(Color.MAGENTA)
 		.setDescription(String.format("Do `%showto` with a topic afterwards, i.e. `%<showto setup`.\n"
 				+ "If you just want a list of commands, do `%<scommands`\n"
-				+ "More info, invite links, and the dashboard can be found at my website: <>", prefix))
+				+ "More info, invite links, and the dashboard can be found at my website:", prefix))
 		.addField("Options", "setup, moderation, role management, live feeds, music", true);
 		channel.sendMessage(em.build()).queue();
 	}

@@ -13,6 +13,12 @@ import io.ph.util.Util;
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.entities.Message;
 
+/**
+ * Skeleton of a scripting engine
+ * Pretty cool stuff with Java 8
+ * @author Paul
+ *
+ */
 @CommandData (
 		defaultSyntax = "evaluate",
 		aliases = {"eval", "exec", "execute"},

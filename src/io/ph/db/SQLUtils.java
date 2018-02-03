@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 /**
  * SQL Utilities to close various SQL objects quietly
- * @author xPlodeBoi
+ * @author Paul
  *
  */
 public class SQLUtils {

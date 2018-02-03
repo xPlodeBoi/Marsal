@@ -92,8 +92,8 @@ public class WebServer {
 		});
 		// These 3 lines are examples of redirections. Feel free to change or whatever you want to do
 		redirect.get("/changes", "/changelog.html");
-		redirect.get("/join", "https://discord.gg/uM3pyW8");
-		redirect.get("/github", "https://github.com/paul-io/momo-2");
+		redirect.get("/join", "https://discord.gg/");
+		redirect.get("/github", "");
 		
 	}
 

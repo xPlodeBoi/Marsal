@@ -55,7 +55,7 @@ public class Util {
 	/**
 	 * Resolve a user from a String - String must be only their username.
 	 * First checks nicknames then usernames
-	 * @param s String to check
+	 * @param  String to check
 	 * @return User if found, null if not found
 	 */
 	public static Member resolveMemberFromMessage(String toCheck, Guild guild) {

@@ -1,19 +1,19 @@
-# Marsal, an open source Discord Bot
-[![license](https://img.shields.io/github/license/paul-io/momo-2.svg)](https://github.com/paul-io/momo-2/blob/master/LICENSE) [![Dependencies](https://app.updateimpact.com/badge/809606116261629952/Momo%20Discord%20Bot.svg?config=test)](https://app.updateimpact.com/latest/809606116261629952/Momo%20Discord%20Bot) [![Dependency Status](https://www.versioneye.com/user/projects/58677499e78d7d00471b7787/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58677499e78d7d00471b7787) [![GitHub release](https://img.shields.io/github/release/paul-io/momo-2.svg)](https://github.com/xPlodeBoi/Momo) [![join the Momo discord server](https://discordapp.com/api/guilds/259125580744753153/embed.png)](https://discord.gg/f9uBU7y) 
+# Momo, an open source easy-to-host Discord Bot
+[![license](https://img.shields.io/github/license/paul-io/momo-2.svg)](https://github.com/paul-io/momo-2/blob/master/LICENSE) [![Dependencies](https://app.updateimpact.com/badge/809606116261629952/Momo%20Discord%20Bot.svg?config=test)](https://app.updateimpact.com/latest/809606116261629952/Momo%20Discord%20Bot) [![Dependency Status](https://www.versioneye.com/user/projects/58677499e78d7d00471b7787/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58677499e78d7d00471b7787) [![GitHub release](https://img.shields.io/github/release/paul-io/momo-2.svg)](https://github.com/paul-io/momo-2/releases) [![join the Momo discord server](https://discordapp.com/api/guilds/259125580744753153/embed.png)](https://discord.gg/uM3pyW8) 
 
 Join the discord server linked above to get support, see upcoming features, or to test the bot!
 
-**Marsal** is a simple-to-use Discord bot based off of [JDA](https://github.com/DV8FromTheWorld/JDA).  From sending Twitch.tv notifications to playing music, and from pulling anime theme songs off of [Themes.moe](https://themes.moe) to temporarily muting troublemakers, Marsal can do a lot for your server.
+**Momo** is a simple-to-use Discord bot based off of [JDA](https://github.com/DV8FromTheWorld/JDA).  From sending Twitch.tv notifications to playing music, and from pulling anime theme songs off of [Themes.moe](https://themes.moe) to temporarily muting troublemakers, Momo can do a lot for your server.
 
 
-## Can I just add Marsal to my server?
-Soon
+## Can I just add Momo to my server?
+After July 15, 2017, you cannot. Server costs were unmanageable (lots of bandwidth and processing power needed for music to 100+ servers at a time), so I made the difficult decision to shut it down. Check the wiki for setup instructions to host it yourself!
 ### Web dashboard
-Soon
+Introduced in update 1.2, Momo features a [web dashboard](https://momobot.io/dash) to configure various aspects of the bot, such as welcome prefix, enabled commands, and Twitter/Reddit feeds. You don't have to be the server owner, either - configuration starts from moderators with the `kick` permission. Everything that can be done through the dashboard can also be done through commands. This is available to download to host yourself
 ### Features? Gimme some info!
 * Reddit, Twitter, & Twitch.tv feeds - Get updates directly to your channel of choice with image/preview configuration
 * Play music in a music channel. Can play off direct Youtube searches, too!
-* Web dashboard - Soon
+* Web dashboard. Configure your server settings from the ease of your browser from the [dashboard](https://momobot.io/dash)
 * Role management: Set roles as *joinable* and allow users to join/leave at their whim
 * Bring up character for various video games: FFXIV, WoW, osu! *(LoL & Overwatch coming soon!)*
 * Commands to ban, kick, and prune messages
@@ -23,8 +23,18 @@ Soon
 
 ---
 
+## Hosting Momo for yourself
+More descriptive details are at the [repository wiki](https://github.com/paul-io/momo-2/wiki)
+`you need java 8 to run this bot`
+
+* If you want to host your own instance of the bot, feel free to take a look at the Releases tab and download the package. Fill out the configuration in the `resources/Bot.properties` file, then run `java -jar momo-x.x.x.jar` where `x.x.x` is the current version. 
+* To obtain a bot token from Discord, head on over to the [Discord Developers](https://discordapp.com/developers/applications/me) page. From there, you can create an Application, then convert it to a Bot account. Then, click to show the bot token, which you can copy and paste into `Bot.properties`
+* Hosting Momo for yourself nets you some benefits. Music functionality, though dependent on your internet speeds, will be better for single servers than a larger cluster. You can also change its username, avatar, and game status to whatever you see fit!
+
+---
+
 ## Pulling from the source & building
-Marsal uses [Apache Maven](https://maven.apache.org/) for project management. As such, it's extremely simple managing Java dependencies, so building any edits and changes you want into your own bot is easy.
+Momo uses [Apache Maven](https://maven.apache.org/) for project management. As such, it's extremely simple managing Java dependencies, so building any edits and changes you want into your own bot is easy.
 
 #### Installing Maven
 Linux: `apt-get install maven`
@@ -40,17 +50,17 @@ chocolatey: `choco install maven`
 homebrew: `brew install maven`
 
 #### Building
-Run `mvn install` on the root directory. This will create two builds: a `.jar` of the bot's source & a `.jar` with all the dependencies shaded (all packaged into a single file). This is the file you want - `marsal-x.x.x.jar`. On subsequent builds, if you do not run the command with the `clean` parameter, then all `.jar` will be the correct bot.
+Run `mvn install` on the root directory. This will create two builds: a `.jar` of the bot's source & a `.jar` with all the dependencies shaded (all packaged into a single file). This is the file you want - `momo-x.x.x.jar`. On subsequent builds, if you do not run the command with the `clean` parameter, then all `.jar` will be the correct bot.
 
 **NOTE**: `mvn install` *does not* copy the resources folder to the `target/` directory. As a side effect, it *will not* overwrite pre-existing resources, so you are free to copy over `resources/` to `target/`.
 
 **NOTE 2**: If you decide to run `mvn clean install`, *all folders and files in* `target/` *will be deleted*. Just a forewarning before you lose all of your server's data
 
 #### Running
-Once you have built the jar, simply run `java -jar marsal-x.x.x.jar` where `x.x.x` is the current version numbering. 
+Once you have built the jar, simply run `java -jar momo-x.x.x.jar` where `x.x.x` is the current version numbering. 
 
 ### Creating a command
-Probably the #1 reason people will run their own bot, and probably the easiest thing to implement with Marsal. This example also shows how permissions are setup, so if you want to change the permission level of commands... You're in the right place.
+Probably the #1 reason people will run their own bot, and probably the easiest thing to implement with Momo. This example also shows how permissions are setup, so if you want to change the permission level of commands... You're in the right place.
 
 1. Create a new class file. Must be in the `io.ph.bot.commands` package.
 
