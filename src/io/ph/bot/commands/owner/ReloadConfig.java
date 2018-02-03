@@ -20,9 +20,9 @@ public class ReloadConfig extends Command {
 	@Override
 	public void executeCommand(Message msg) {
 		Bot.getInstance().loadProperties();
-		msg.getAuthor().openPrivateChannel().queue(ch -> {
-			ch.sendMessage("Reloaded").queue();
-		});
+		msg.getAuthor().openPrivateChannel().queue(ch ->
+			ch.sendMessage("Reloaded").queue()
+		);
 	}
 
 }
