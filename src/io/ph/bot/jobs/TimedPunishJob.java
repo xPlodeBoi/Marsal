@@ -37,6 +37,7 @@ public class TimedPunishJob implements Job {
 		PreparedStatement prep = null;
 		Statement stmt = null;
 		ResultSet rs = null;
+
 		try {
 			conn = ConnectionPool.getGlobalDatabaseConnection();
 			stmt = conn.createStatement();

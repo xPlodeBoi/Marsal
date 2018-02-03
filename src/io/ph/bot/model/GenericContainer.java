@@ -1,11 +1,10 @@
 package io.ph.bot.model;
 
 public class GenericContainer<T> {
+
     private T t;
 
-    public GenericContainer() {
-    	
-    }
+    public GenericContainer() {}
 
     public GenericContainer(T t) {
         this.t = t;

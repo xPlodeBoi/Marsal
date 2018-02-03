@@ -30,20 +30,20 @@ public class WebSyncJob implements Job {
 		AtomicInteger guildCount = new AtomicInteger();
 		
 		Bot.getInstance().getBots().stream()
-		.forEach(j -> { 
-			userCount.addAndGet(j.getUsers().size());
-			guildCount.addAndGet(j.getGuilds().size());
-		});
+			.forEach(j -> {
+				userCount.addAndGet(j.getUsers().size());
+				guildCount.addAndGet(j.getGuilds().size());
+			});
 		
 		
 		WebServer.getBotStats().setMessageCount(messageCount)
-		.setCommandCount(commandCount)
-		.setUsers(userCount.get())
-		.setMemoryUsage((int) (((double) total - free) / total * 100))
-		.setGuilds(guildCount.get())
-		.setUptimeHours((int) TimeUnit.MILLISECONDS.toHours(uptime))
-		.setUptimeMinutes((int) (TimeUnit.MILLISECONDS.toMinutes(uptime)
-				- TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(uptime))));
+			.setCommandCount(commandCount)
+			.setUsers(userCount.get())
+			.setMemoryUsage((int) (((double) total - free) / total * 100))
+			.setGuilds(guildCount.get())
+			.setUptimeHours((int) TimeUnit.MILLISECONDS.toHours(uptime))
+			.setUptimeMinutes((int) (TimeUnit.MILLISECONDS.toMinutes(uptime)
+					- TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(uptime))));
 
 		messageCount = 0;
 		commandCount = 0;
