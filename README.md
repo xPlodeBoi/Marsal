@@ -1,17 +1,16 @@
-# Momo, an open source easy-to-host Discord Bot
+# Momo, an open source Discord Bot
 [![license](https://img.shields.io/github/license/paul-io/momo-2.svg)](https://github.com/paul-io/momo-2/blob/master/LICENSE) [![Dependencies](https://app.updateimpact.com/badge/809606116261629952/Momo%20Discord%20Bot.svg?config=test)](https://app.updateimpact.com/latest/809606116261629952/Momo%20Discord%20Bot) [![Dependency Status](https://www.versioneye.com/user/projects/58677499e78d7d00471b7787/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58677499e78d7d00471b7787) [![GitHub release](https://img.shields.io/github/release/paul-io/momo-2.svg)](https://github.com/paul-io/momo-2/releases) [![join the Momo discord server](https://discordapp.com/api/guilds/259125580744753153/embed.png)](https://discord.gg/uM3pyW8) 
 
 Join the discord server linked above to get support, see upcoming features, or to test the bot!
 
-**Momo** is a simple-to-use Discord bot based off of [JDA](https://github.com/DV8FromTheWorld/JDA).  From sending Twitch.tv notifications to playing music, and from pulling anime theme songs off of [Themes.moe](https://themes.moe) to temporarily muting troublemakers, Momo can do a lot for your server.
+**Marsal** is a simple-to-use Discord bot based off of [JDA](https://github.com/DV8FromTheWorld/JDA).  From sending Twitch.tv notifications to playing music, and from pulling anime theme songs off of [Themes.moe](https://themes.moe) to temporarily muting troublemakers, Momo can do a lot for your server.
 
 
 ## Can I just add Momo to my server?
-After July 15, 2017, you cannot. Server costs were unmanageable (lots of bandwidth and processing power needed for music to 100+ servers at a time), so I made the difficult decision to shut it down. Check the wiki for setup instructions to host it yourself!
+Nope
 ### Web dashboard
-Introduced in update 1.2, Momo features a [web dashboard](https://momobot.io/dash) to configure various aspects of the bot, such as welcome prefix, enabled commands, and Twitter/Reddit feeds. You don't have to be the server owner, either - configuration starts from moderators with the `kick` permission. Everything that can be done through the dashboard can also be done through commands. This is available to download to host yourself
+Soon
 ### Features? Gimme some info!
-* Reddit, Twitter, & Twitch.tv feeds - Get updates directly to your channel of choice with image/preview configuration
 * Play music in a music channel. Can play off direct Youtube searches, too!
 * Web dashboard. Configure your server settings from the ease of your browser from the [dashboard](https://momobot.io/dash)
 * Role management: Set roles as *joinable* and allow users to join/leave at their whim
